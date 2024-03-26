@@ -54,7 +54,24 @@
       counterFunction(); //Output: 1
       counterFunction(); //Output: 2
       counterFunction(); //Output: 3
-      
+      //document.getElementById("Count").innerText= (??????);
+
+//Explanetory example
+    function outerScopeExample() {
+
+      let outerVar = "I am from outer scope";
+
+      function innerScopeExampe() {
+
+        console.log(outerVar);  //accesses outer variable
+
+      }
+
+      innerScopeExampe();
+
+    }
+
+    outerScopeExample(); //Output: I am from outer scope
 
 
 

@@ -5,3 +5,4 @@ Exercise repo exclusively JS nests
 "show Ex 1a & 1b in console, as alert and on Dom"
 "Ex 1a, 1b copied by hand with changes"
 "Add example 3 from Linkedin odt"
+"Add Explanatory example"
