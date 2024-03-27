@@ -7,3 +7,4 @@ Exercise repo exclusively JS nests
 "Add example 3 from Linkedin odt"
 "Add Explanatory example"
 "Add Examples Scope and Encapsulation"
+"Add Example Closure"

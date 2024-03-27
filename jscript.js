@@ -37,23 +37,23 @@
 //   sayHiGo("Tory", "Party");
 
 //  //3 - Ex from Linkedin doc Counter with Closure 
-    function counter(){
-      let count = 0;
-      function increment(){
-        count++;
-        console.log(count);
-        alert(count);
+    // function counter(){
+    //   let count = 0;
+    //   function increment(){
+    //     count++;
+    //     console.log(count);
+    //     alert(count);
           
-      }
+    //   }
       
-      return increment;
+    //   return increment;
       
-    }
+    // }
 
-      const counterFunction = counter();
-      counterFunction(); //Output: 1
-      counterFunction(); //Output: 2
-      counterFunction(); //Output: 3
+    //   const counterFunction = counter();
+    //   counterFunction(); //Output: 1
+    //   counterFunction(); //Output: 2
+    //   counterFunction(); //Output: 3
       //document.getElementById("Count").innerText= (??????);
 
 //Explanetory example Scope 
@@ -89,6 +89,20 @@
       const counterFunctionb = counter();
       counterFunctionb(); //Output 1
       counterFunctionb(); //Output 2
+
+//Example Closure
+    function outerClosure() {
+      let outerVar = "I am from outer closure";
+
+      function innerClosure() {
+        console.log(outerVar); //Accessing outer variable even after function called
+
+      }
+      return innerClosure;
+
+    }
+      const closureFunction = outerClosure();
+      closureFunction() ; //Output: I am from outer closure
 
 
   
