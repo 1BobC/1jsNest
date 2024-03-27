@@ -63,12 +63,15 @@
 
       function innerScopeExampe() {
 
+        let innerVar = "But I am from inner scope";
+        console.log(innerVar);
+
         console.log(outerVar);  //accesses outer variable
 
       }
 
       innerScopeExampe();
-
+      
     }
 
     outerScopeExample(); //Output: I am from outer scope
