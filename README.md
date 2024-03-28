@@ -9,3 +9,4 @@ Exercise repo exclusively JS nests
 "Add Examples Scope and Encapsulation"
 "Add Example Closure"
 "Add console log to scope Ex"
+"Add 4 simple examples but no copy past!"

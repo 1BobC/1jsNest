@@ -57,55 +57,101 @@
       //document.getElementById("Count").innerText= (??????);
 
 //Explanetory example Scope 
-    function outerScopeExample() {
+    // function outerScopeExample() {
 
-      let outerVar = "I am from outer scope";
+    //   let outerVar = "I am from outer scope";
 
-      function innerScopeExampe() {
+    //   function innerScopeExampe() {
 
-        let innerVar = "But I am from inner scope";
-        console.log(innerVar);
+    //     let innerVar = "But I am from inner scope";
+    //     console.log(innerVar);
 
-        console.log(outerVar);  //accesses outer variable
+    //     console.log(outerVar);  //accesses outer variable
 
-      }
+    //   }
 
-      innerScopeExampe();
+    //   innerScopeExampe();
       
-    }
+    // }
 
-    outerScopeExample(); //Output: I am from outer scope
+    // outerScopeExample(); //Output: I am from outer scope
     //document.getElementById("LEe").innerText= (???????);
 
 //and Encapsulation
-    function counter() {
-      let count = 0;
+    // function counter() {
+    //   let count = 0;
 
-      function increment() {
-        count++;
-        console.log(count);
+    //   function increment() {
+    //     count++;
+    //     console.log(count);
 
-      }
-      return increment;
+    //   }
+    //   return increment;
 
-    }    
-      const counterFunctionb = counter();
-      counterFunctionb(); //Output 1
-      counterFunctionb(); //Output 2
+    // }    
+    //   const counterFunctionb = counter();
+    //   counterFunctionb(); //Output 1
+    //   counterFunctionb(); //Output 2
 
 //Example Closure
-    function outerClosure() {
-      let outerVar = "I am from outer closure";
+    // function outerClosure() {
+    //   let outerVar = "I am from outer closure";
 
-      function innerClosure() {
-        console.log(outerVar); //Accessing outer variable even after function called
+    //   function innerClosure() {
+    //     console.log(outerVar); //Accessing outer variable even after function called
+
+    //   }
+    //   return innerClosure;
+
+    // }
+    //   const closureFunction = outerClosure();
+    //   closureFunction() ; //Output: I am from outer closure
+
+    //Example from JS learning outcomes2 file
+    function outerF(){
+      console.log("I'm the outer function");
+
+      function innerF(){
+        console.log("I'm the inner function");
+      }
+      innerF();
+    }
+      outerF();
+
+    //Example similar (simple) as above
+    function parent(){
+      console.log("I'm the parent");
+
+      function child(){
+        console.log("I'm the child");
+      }
+        child();
+    }     
+        parent(); 
+
+    //Example again similar (simple) as above
+    function bo(){
+      console.log("Say BO");
+
+      function peep(){
+        console.log("Now say PEEP!");
+      }
+      peep();
+    }
+      bo();
+
+    //Example do I remember (simple) as above? Hand in glove
+    function hand(){
+      console.log("Hand ");
+
+      function glove(){
+        console.log("in Glove");
 
       }
-      return innerClosure;
-
+      glove();
     }
-      const closureFunction = outerClosure();
-      closureFunction() ; //Output: I am from outer closure
+
+      hand();
 
 
   
