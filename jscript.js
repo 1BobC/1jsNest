@@ -108,60 +108,76 @@
     //   closureFunction() ; //Output: I am from outer closure
 
     //Example from JS learning outcomes2 file
-    function outerF(){
-      console.log("I'm the outer function");
+    // function outerF(){
+    //   console.log("I'm the outer function");
 
-      function innerF(){
-        console.log("I'm the inner function");
+    //   function innerF(){
+    //     console.log("I'm the inner function");
+    //   }
+    //   innerF();
+    // }
+    //   outerF();
+
+    // //Example similar (simple) as above
+    // function parent(){
+    //   console.log("I'm the parent");
+
+    //   function child(){
+    //     console.log("I'm the child");
+    //   }
+    //     child();
+    // }     
+    //     parent(); 
+
+    // //Example again similar (simple) as above
+    // function bo(){
+    //   console.log("Say BO");
+
+    //   function peep(){
+    //     console.log("Now say PEEP!");
+    //   }
+    //   peep();
+    // }
+    //   bo();
+
+    // //Example do I remember (simple) as above? Hand in glove
+    // function hand(){
+    //   console.log("Hand ");
+
+    //   function glove(){
+    //     console.log("in Glove");
+
+    //   }
+    //   glove();
+    // }
+    //   hand();
+
+    // //Example do I still remember?
+    // function still(){
+    //   console.log("Do I still ");
+
+    //   function remember(){
+    //     console.log("remember?");
+    //   }
+    //   remember();
+    // }
+    //   still();
+
+      //Redo example of Scope defining the visibility and accessibility of variables.
+      function outerScopeEG(){
+        let outerVar = "I am from outer scope / container function.";
+
+        function innerScopeEG(){
+
+          console.log(outerVar) ; //Accesses outer variable 
+        }
+
+        innerScopeEG() ;
+
       }
-      innerF();
-    }
-      outerF();
 
-    //Example similar (simple) as above
-    function parent(){
-      console.log("I'm the parent");
+        outerScopeEG(); //Output :I am from outer scope / container function. 
 
-      function child(){
-        console.log("I'm the child");
-      }
-        child();
-    }     
-        parent(); 
-
-    //Example again similar (simple) as above
-    function bo(){
-      console.log("Say BO");
-
-      function peep(){
-        console.log("Now say PEEP!");
-      }
-      peep();
-    }
-      bo();
-
-    //Example do I remember (simple) as above? Hand in glove
-    function hand(){
-      console.log("Hand ");
-
-      function glove(){
-        console.log("in Glove");
-
-      }
-      glove();
-    }
-      hand();
-
-    //Example do I still remember?
-    function still(){
-      console.log("Do I still ");
-
-      function remember(){
-        console.log("remember?");
-      }
-      remember();
-    }
-      still();
 
 
   
