@@ -150,8 +150,18 @@
       }
       glove();
     }
-
       hand();
+
+    //Example do I still remember?
+    function still(){
+      console.log("Do I still ");
+
+      function remember(){
+        console.log("remember?");
+      }
+      remember();
+    }
+      still();
 
 
   
