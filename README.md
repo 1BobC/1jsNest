@@ -12,3 +12,4 @@ Exercise repo exclusively JS nests
 "Add 4 simple examples but no copy past!"
 "Add example Example Do I still remember?"
 "Redo example of Scope defining the visibility and accessibility of variables."
+"Redo example of Encapsulation"

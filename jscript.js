@@ -37,24 +37,21 @@
 //   sayHiGo("Tory", "Party");
 
 //  //3 - Ex from Linkedin doc Counter with Closure 
-    // function counter(){
-    //   let count = 0;
-    //   function increment(){
-    //     count++;
-    //     console.log(count);
-    //     alert(count);
+    function counter(){
+      let count = 0;
+      function increment(){
+        count++;
+        console.log(count);
           
-    //   }
+      }
       
-    //   return increment;
+      return increment;
       
-    // }
-
-    //   const counterFunction = counter();
-    //   counterFunction(); //Output: 1
-    //   counterFunction(); //Output: 2
-    //   counterFunction(); //Output: 3
-      //document.getElementById("Count").innerText= (??????);
+    }
+      const counterFunctionA = counter();
+      counterFunctionA(); //Output: 1
+      counterFunctionA(); //Output: 2
+      counterFunctionA(); //Output: 3
 
 //Explanetory example Scope 
     // function outerScopeExample() {
@@ -78,20 +75,20 @@
     //document.getElementById("LEe").innerText= (???????);
 
 //and Encapsulation
-    // function counter() {
-    //   let count = 0;
+    function counter() {
+      let count = 0;
 
-    //   function increment() {
-    //     count++;
-    //     console.log(count);
+      function increment() {
+        count++;
+        console.log(count);
 
-    //   }
-    //   return increment;
+      }
+      return increment;
 
-    // }    
-    //   const counterFunctionb = counter();
-    //   counterFunctionb(); //Output 1
-    //   counterFunctionb(); //Output 2
+    }    
+      const counterFunctionb = counter();
+      counterFunctionb(); //Output 1
+      counterFunctionb(); //Output 2
 
 //Example Closure
     // function outerClosure() {
@@ -177,6 +174,23 @@
       }
 
         outerScopeEG(); //Output :I am from outer scope / container function. 
+
+      //Redo example of Encapsulation
+      function counter(){
+        let count = 0;
+
+        function increment(){
+          console.log(count);
+          count++
+        }
+          return increment;
+      }
+        const counterFunctionC = counter();
+
+        counterFunctionC();    //Output 1
+        counterFunctionC();    //Output 2
+        counterFunctionC();    //Output 3
+        counterFunctionC();    //Output 4
 
 
 
