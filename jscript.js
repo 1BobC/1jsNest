@@ -37,21 +37,21 @@
 //   sayHiGo("Tory", "Party");
 
 //  //3 - Ex from Linkedin doc Counter with Closure 
-    function counter(){
-      let count = 0;
-      function increment(){
-        count++;
-        console.log(count);
+    // function counter(){
+    //   let count = 0;
+    //   function increment(){
+    //     count++;
+    //     console.log(count);
           
-      }
+    //   }
       
-      return increment;
+    //   return increment;
       
-    }
-      const counterFunctionA = counter();
-      counterFunctionA(); //Output: 1
-      counterFunctionA(); //Output: 2
-      counterFunctionA(); //Output: 3
+    // }
+    //   const counterFunctionA = counter();
+    //   counterFunctionA(); //Output: 1
+    //   counterFunctionA(); //Output: 2
+    //   counterFunctionA(); //Output: 3
 
 //Explanetory example Scope 
     // function outerScopeExample() {
@@ -75,20 +75,20 @@
     //document.getElementById("LEe").innerText= (???????);
 
 //and Encapsulation
-    function counter() {
-      let count = 0;
+    // function counter() {
+    //   let count = 0;
 
-      function increment() {
-        count++;
-        console.log(count);
+    //   function increment() {
+    //     count++;
+    //     console.log(count);
 
-      }
-      return increment;
+    //   }
+    //   return increment;
 
-    }    
-      const counterFunctionb = counter();
-      counterFunctionb(); //Output 1
-      counterFunctionb(); //Output 2
+    // }    
+    //   const counterFunctionb = counter();
+    //   counterFunctionb(); //Output 1
+    //   counterFunctionb(); //Output 2
 
 //Example Closure
     // function outerClosure() {
@@ -161,39 +161,54 @@
     //   still();
 
       //Redo example of Scope defining the visibility and accessibility of variables.
-      function outerScopeEG(){
-        let outerVar = "I am from outer scope / container function.";
+      // function outerScopeEG(){
+      //   let outerVar = "I am from outer scope / container function.";
 
-        function innerScopeEG(){
+      //   function innerScopeEG(){
 
-          console.log(outerVar) ; //Accesses outer variable 
+      //     console.log(outerVar) ; //Accesses outer variable 
+      //   }
+
+      //   innerScopeEG() ;
+
+      // }
+
+      //   outerScopeEG(); //Output :I am from outer scope / container function. 
+
+      // //Redo example of Encapsulation
+      // function counter(){
+      //   let count = 0;
+
+      //   function increment(){
+      //     console.log(count);
+      //     count++
+      //   }
+      //     return increment;
+      // }
+      //   const counterFunctionC = counter();
+
+      //   counterFunctionC();    //Output 1
+      //   counterFunctionC();    //Output 2
+      //   counterFunctionC();    //Output 3
+      //   counterFunctionC();    //Output 4
+        
+       //Exercise Closure
+       function outerClosure(){
+        let outerVar = "I am from outer closure.";
+
+        function innerClosure(){
+          console.log(outerVar); //Accessing outer variable even after function finishes
+
         }
+        return innerClosure();
 
-        innerScopeEG() ;
-
-      }
-
-        outerScopeEG(); //Output :I am from outer scope / container function. 
-
-      //Redo example of Encapsulation
-      function counter(){
-        let count = 0;
-
-        function increment(){
-          console.log(count);
-          count++
-        }
-          return increment;
-      }
-        const counterFunctionC = counter();
-
-        counterFunctionC();    //Output 1
-        counterFunctionC();    //Output 2
-        counterFunctionC();    //Output 3
-        counterFunctionC();    //Output 4
-
-
-
+       }
+        // const closureFunction = outerClosure();
+        // closureFunction(); //Output: I am from outer closure
+        outerClosure();
+        console.log("End of function, first time");
+        outerClosure();
+        console.log("End of function, second time");
   
 
 

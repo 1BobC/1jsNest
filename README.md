@@ -13,3 +13,4 @@ Exercise repo exclusively JS nests
 "Add example Example Do I still remember?"
 "Redo example of Scope defining the visibility and accessibility of variables."
 "Redo example of Encapsulation"
+"Exercise Closure"
