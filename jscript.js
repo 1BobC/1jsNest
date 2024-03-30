@@ -193,23 +193,37 @@
       //   counterFunctionC();    //Output 4
         
        //Exercise Closure
-       function outerClosure(){
-        let outerVar = "I am from outer closure.";
+    //    function outerClosure(){
+    //     let outerVar = "I am from outer closure.";
 
-        function innerClosure(){
-          console.log(outerVar); //Accessing outer variable even after function finishes
+    //     function innerClosure(){
+    //       console.log(outerVar); //Accessing outer variable even after function finishes
 
-        }
-        return innerClosure();
+    //     }
+    //     return innerClosure();
+    //    }
 
-       }
         // const closureFunction = outerClosure();
         // closureFunction(); //Output: I am from outer closure
-        outerClosure();
-        console.log("End of function, first time");
-        outerClosure();
-        console.log("End of function, second time");
+        // outerClosure();
+        // console.log("End of function, first time");
+        // outerClosure();
+        // console.log("End of function, second time");
   
+        //Exercise 1: Basic Nested Function LinkedIn JSNested Functions 
+        function outer() {
+            console.log("Outer Function");
+
+            function inner() {
+                console.log("Inner Function");
+            }
+            inner();
+
+        }
+            outer();
+        //Output:
+        //Outer Function
+        //Inner Function
 
 
 

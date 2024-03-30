@@ -14,3 +14,4 @@ Exercise repo exclusively JS nests
 "Redo example of Scope defining the visibility and accessibility of variables."
 "Redo example of Encapsulation"
 "Exercise Closure"
+"Add  Exercise 1: Basic Nested Function from LinkedIn JSNested Functions"
