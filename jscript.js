@@ -211,19 +211,33 @@
         // console.log("End of function, second time");
   
         //Exercise 1: Basic Nested Function LinkedIn JSNested Functions 
-        function outer() {
-            console.log("Outer Function");
+        // function outer() {
+        //     console.log("Outer Function");
 
-            function inner() {
-                console.log("Inner Function");
-            }
-            inner();
+        //     function inner() {
+        //         console.log("Inner Function");
+        //     }
+        //     inner();
 
-        }
-            outer();
+        // }
+        //     outer();
         //Output:
         //Outer Function
         //Inner Function
+
+        //Exercise 2: Access Outer Scope Variable LinkedIn JSNested Functions
+        function outerEx2(){
+            let outerVar = "I am the outer variable logged from the inner variable";
+
+            function innerEx2(){
+                console.log(outerVar);
+
+            }
+            innerEx2(); //calls the inner function 
+
+        }
+            outerEx2(); //calls the outer (parent) function and starts the function off
+
 
 
 

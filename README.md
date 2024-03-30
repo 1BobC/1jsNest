@@ -15,3 +15,4 @@ Exercise repo exclusively JS nests
 "Redo example of Encapsulation"
 "Exercise Closure"
 "Add  Exercise 1: Basic Nested Function from LinkedIn JSNested Functions"
+"Add Exercise 2: Access Outer Scope Variable from LinkedIn JSNested Functions"
