@@ -71,16 +71,51 @@
    1. Define the outer function. 
    2. Inside the outer function, define the inner function. 
    3. Call the inner function from within the outer function. 
-   4. Call the outer function last, outside the outer function.
+   4. Call the outer function from outside the outer function.
 </p>
 
 <h3>Exercise 2: Access Outer Scope Variable </h3>
 <p>Create a function outerScopeExample with a variable. Inside it, define a function innerScopeExample 
    that accesses the outer variable. </p>
 <p>Steps: 
-   1. Define function outerScopeExample with a variable. 
-   2. Inside outerScopeExample, define function innerScopeExample that logs the outer variable. </p>
+   1. Define the outer function with a variable. 
+   2. Inside the outer function, define the inner function with variable that logs the outer variable. 
+   3. Call the inner function from within the outer function.
+   4. Call the outer function from outside the outer function.</p>
 
+<h3>flexiple.com expression returns undefined (part of closure explanation)</h3>
+
+<h3>Exercise 3: Counter with Closure </h3>
+<p>Create a counter function using nested functions. 
+   The inner function should increment and log the count. </p>
+<p>Steps: 
+   1. Define a counter (outer / parent)function with a count variable. 
+   2. Inside the counter function, define an increment function that increments and logs the count. 
+   3. Return the increment function within the outer function.
+   4. Create a constant of the counter (outer) functon.
+   5. Call the counter (outer) functon multiple times.</p>
+
+ <h3>Further explanation and exercise  of closure from M mdn web docs on Linkdin JS odt</h3> 
+ <p>You may nest a function within another function. 
+   The nested (inner) function is private to its containing (outer) function.</p> 
+<p>It also forms a closure. A closure is an expression (most commonly, a function) that can have 
+   free variables together with an environment that binds those variables 
+   (that "closes" the expression).</p>
+<p>Since a nested function is a closure, this means that a nested function can "inherit" 
+   the arguments and variables of its containing function. 
+   In other words, the inner function contains the scope of the outer function.</p>
+<p>    • The inner function can be accessed only from statements in the outer function. 
+   • The inner function forms a closure: the inner function can use the arguments and variables 
+   of the outer function, while the outer function cannot use the arguments and variables 
+   of the inner function. </p>
+
+<h3>Even more explanation and exercise  of closure from M mdn web docs on Linkdin JS odt</h3> 
+<p>Since the inner function forms a closure, you can call the outer function 
+   and specify arguments for both the outer and inner function:</p>
+
+
+
+<div class = 'footer'>End of Document</div>
 
 
 

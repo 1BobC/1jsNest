@@ -16,3 +16,5 @@ Exercise repo exclusively JS nests
 "Exercise Closure"
 "Add  Exercise 1: Basic Nested Function from LinkedIn JSNested Functions"
 "Add Exercise 2: Access Outer Scope Variable from LinkedIn JSNested Functions"
+
+"Add EX flexiple, Exercise 3: Counter with Closure, Further explanation and exercise  of closure from M mdn web, Even more explanation and exercise of closure from M mdn web"

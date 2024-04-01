@@ -1,8 +1,8 @@
-// js nested function exercises only
+    // js nested function exercises only
 // 1 - Exercise from javascript.info
-// function sayHiBye(firstName, lastName) {
+    // function sayHiBye(firstName, lastName) {
 
-//     // helper nested function to use below
+    // helper nested function to use below
 //     function getFullName() {
 //       return firstName + " " + lastName;
 //     }
@@ -18,7 +18,7 @@
 
 //   sayHiBye("Damon", "Runyon");
 
-//   //2 - Ex 1a, 1b copied by hand with changes
+//2 - Ex 1a, 1b copied by hand with changes
 //   function sayHiGo(firstN, lastN)  {
 //     // nested function
 //     function getFullN()  {
@@ -36,7 +36,7 @@
 
 //   sayHiGo("Tory", "Party");
 
-//  //3 - Ex from Linkedin doc Counter with Closure 
+//3 - Ex from Linkedin doc Counter with Closure 
     // function counter(){
     //   let count = 0;
     //   function increment(){
@@ -104,7 +104,7 @@
     //   const closureFunction = outerClosure();
     //   closureFunction() ; //Output: I am from outer closure
 
-    //Example from JS learning outcomes2 file
+//Example from JS learning outcomes2 file
     // function outerF(){
     //   console.log("I'm the outer function");
 
@@ -115,7 +115,7 @@
     // }
     //   outerF();
 
-    // //Example similar (simple) as above
+    //Example similar (simple) as above
     // function parent(){
     //   console.log("I'm the parent");
 
@@ -126,7 +126,7 @@
     // }     
     //     parent(); 
 
-    // //Example again similar (simple) as above
+//Example again similar (simple) as above
     // function bo(){
     //   console.log("Say BO");
 
@@ -137,7 +137,7 @@
     // }
     //   bo();
 
-    // //Example do I remember (simple) as above? Hand in glove
+//Example do I remember (simple) as above? Hand in glove
     // function hand(){
     //   console.log("Hand ");
 
@@ -149,7 +149,7 @@
     // }
     //   hand();
 
-    // //Example do I still remember?
+//Example do I still remember?
     // function still(){
     //   console.log("Do I still ");
 
@@ -160,7 +160,7 @@
     // }
     //   still();
 
-      //Redo example of Scope defining the visibility and accessibility of variables.
+//Redo example of Scope defining the visibility and accessibility of variables.
       // function outerScopeEG(){
       //   let outerVar = "I am from outer scope / container function.";
 
@@ -175,7 +175,7 @@
 
       //   outerScopeEG(); //Output :I am from outer scope / container function. 
 
-      // //Redo example of Encapsulation
+//Redo example of Encapsulation
       // function counter(){
       //   let count = 0;
 
@@ -192,7 +192,7 @@
       //   counterFunctionC();    //Output 3
       //   counterFunctionC();    //Output 4
         
-       //Exercise Closure
+//Exercise Closure
     //    function outerClosure(){
     //     let outerVar = "I am from outer closure.";
 
@@ -210,7 +210,7 @@
         // outerClosure();
         // console.log("End of function, second time");
   
-        //Exercise 1: Basic Nested Function LinkedIn JSNested Functions 
+//Exercise 1: Basic Nested Function LinkedIn JSNested Functions 
         // function outer() {
         //     console.log("Outer Function");
 
@@ -225,19 +225,84 @@
         //Outer Function
         //Inner Function
 
-        //Exercise 2: Access Outer Scope Variable LinkedIn JSNested Functions
-        function outerEx2(){
-            let outerVar = "I am the outer variable logged from the inner variable";
+//Exercise 2: Access Outer Scope Variable LinkedIn JSNested Functions
+        // function outerEx2(){
+        //     let outerVar = "I am the outer variable logged from the inner variable";
 
-            function innerEx2(){
-                console.log(outerVar);
+        //     function innerEx2(){
+        //         console.log(outerVar);
 
+        //     }
+        //     innerEx2(); //calls the inner function 
+
+        // }
+        //     outerEx2(); //calls the outer (parent) function and starts the function off
+
+//flexiple.com expression returns undefined (part of closure explanation)
+        // const getName = (name) => {
+
+        //     if (name == 'Flexiple') {
+        
+        //         console.log(name);
+        //     }
+        // }   
+        //     getName('Flexiple');
+            //getName('Arthur');  //No result in console
+            //getName(name); //No result in console
+            //getName();    /No result in console
+            //flexiple comment - This function actually returns undefined
+            //However with 'getName('Flexiple');' called, console.log shows Flexiple
+
+//Exercise 3: Counter with Closure
+        function counter() {
+            let count = 0;
+
+            function increment(){
+                count++;
+
+                console.log(count);
             }
-            innerEx2(); //calls the inner function 
+                return increment;
+        }
+
+            const counterFunction = counter();
+            counterFunction();  //Output 1
+            counterFunction();  //Output 2
+            counterFunction();  //Output 3
+
+//Further explanation and exercise  of closure from M mdn web docs on Linkdin JS odt
+        function addSquares(a, b){
+
+            function square(x) {
+
+                return x * x;
+            }
+
+            return square(a) + square(b);
 
         }
-            outerEx2(); //calls the outer (parent) function and starts the function off
 
+            console.log(addSquares(2, 3));
+            console.log(addSquares(20, 30));
+            console.log(addSquares(200, 300));
+
+
+//Even more explanation and exercise of closure from M mdn web docs on Linkdin JS odt
+        function outside(x) {
+
+            function inside(y) {
+
+                return x + y;
+            }
+
+            return inside;
+
+        }
+            const funInside = outside(3); //specifies outside variable x
+            //so adding and inside variable y:
+            console.log(funInside(5)); //console displays 8
+            //or specify both variables with outside function
+            console.log(outside(3) (5)); //console again displays 8
 
 
 
