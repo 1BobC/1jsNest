@@ -254,55 +254,90 @@
             //However with 'getName('Flexiple');' called, console.log shows Flexiple
 
 //Exercise 3: Counter with Closure
-        function counter() {
-            let count = 0;
+        // function counter() {
+        //     let count = 0;
 
-            function increment(){
-                count++;
+        //     function increment(){
+        //         count++;
 
-                console.log(count);
-            }
-                return increment;
-        }
+        //         console.log(count);
+        //     }
+        //         return increment;
+        // }
 
-            const counterFunction = counter();
-            counterFunction();  //Output 1
-            counterFunction();  //Output 2
-            counterFunction();  //Output 3
+        //     const counterFunction = counter();
+        //     counterFunction();  //Output 1
+        //     counterFunction();  //Output 2
+        //     counterFunction();  //Output 3
 
 //Further explanation and exercise  of closure from M mdn web docs on Linkdin JS odt
-        function addSquares(a, b){
+        // function addSquares(a, b){
 
-            function square(x) {
+        //     function square(x) {
 
-                return x * x;
-            }
+        //         return x * x;
+        //     }
 
-            return square(a) + square(b);
+        //     return square(a) + square(b);
 
-        }
+        // }
 
-            console.log(addSquares(2, 3));
-            console.log(addSquares(20, 30));
-            console.log(addSquares(200, 300));
+        //     console.log(addSquares(2, 3));
+        //     console.log(addSquares(20, 30));
+        //     console.log(addSquares(200, 300));
 
 
 //Even more explanation and exercise of closure from M mdn web docs on Linkdin JS odt
-        function outside(x) {
+        // function outside(x) {
 
-            function inside(y) {
+        //     function inside(y) {
 
-                return x + y;
+        //         return x + y;
+        //     }
+
+        //     return inside;
+
+        // }
+        //     const funInside = outside(3); //specifies outside variable x
+        //     //so adding and inside variable y:
+        //     console.log(funInside(5)); //console displays 8
+        //     //or specify both variables with outside function
+        //     console.log(outside(3) (5)); //console again displays 8
+
+//Exercise 4: Counter with closure and an inititalizing parameter
+        // function count(initialCount) {
+        //     let count = initialCount;
+
+        //     console.log(count);         //my code addition
+
+        //     function increment() {
+        //         count++;
+
+        //         console.log(count);
+        //     }
+        //         return increment;
+                
+
+        // }
+        //     const counterFunc = count(1944);
+        //     counterFunc();      //Output 1945
+        //     counterFunc();      //Output 1946 
+
+//Exercise 5: Nested function with array callback loop 
+        function processData(array, callback){
+         
+            for (let element of array){
+                callback(element);
             }
+        }
 
-            return inside;
+        function logElement(element) {
+            console.log(element);
 
         }
-            const funInside = outside(3); //specifies outside variable x
-            //so adding and inside variable y:
-            console.log(funInside(5)); //console displays 8
-            //or specify both variables with outside function
-            console.log(outside(3) (5)); //console again displays 8
+
+            processData([1, 2, 3], logElement);   //Output 1, 2, 3
+
 
 
 
