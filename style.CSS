@@ -10,7 +10,9 @@ h3{color: rgb(100, 10, 150);
 p{color: rgb(100, 10, 150);
     text-align: center;
 }
-
+p.ulist{color: rgb(100, 10, 150);
+    text-align: left;}
+    
 div{color: rgb(250, 80, 15);
     text-align: center;
 }
@@ -20,3 +22,6 @@ div{color: rgb(250, 80, 15);
     left: 0; 
     z-index: 10;
 }
+ul.b {
+    list-style-type: square;
+  }

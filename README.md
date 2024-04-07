@@ -19,6 +19,6 @@ Exercise repo exclusively JS nests
 
 "Add EX flexiple, Exercise 3: Counter with Closure, Further explanation and exercise  of closure from M mdn web, Even more explanation and exercise of closure from M mdn web"
 
-"Add Exercise 4: Counter with closure and an inititalizing parameter, 
-Exercise 5: Nested function with array callback loop
-NB I forgot to declare array with square brackets!!!"
+"Added Ex 4 and Ex 5 NB I forgot to dec arr with squ braks!!!"
+
+"Added Ex 6 and Ex 7 with some ul li as well"

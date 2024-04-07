@@ -104,10 +104,13 @@
 <p>Since a nested function is a closure, this means that a nested function can "inherit" 
    the arguments and variables of its containing function. 
    In other words, the inner function contains the scope of the outer function.</p>
-<p>    • The inner function can be accessed only from statements in the outer function. 
-   • The inner function forms a closure: the inner function can use the arguments and variables 
-   of the outer function, while the outer function cannot use the arguments and variables 
-   of the inner function. </p>
+   <ul class="b">
+      <li><p>The inner function can be accessed only from statements in the outer function.</li>
+   <li><p>The inner function forms a closure: the inner function can use the arguments and variables 
+      of the outer function, while the outer function cannot use the arguments and variables 
+      of the inner function.</p></li></ul>
+     
+   
 
 <h3>Even more explanation and exercise  of closure from M mdn web docs on Linkdin JS odt</h3> 
 <p>Since the inner function forms a closure, you can call the outer function 
@@ -125,6 +128,27 @@
 <p>Steps: 
    1. Define a processData function with parameters array and callback. 
    2. Inside processData, use a loop to apply the callback to each element in the array.</p>
+
+<h3>Exercise 6: Nested Functions with Different Scopes</h3>
+<p>Create a function with a variable in both the outer and inner scopes. 
+   Log both variables from the inner function. </p>
+<p class="ulist">Steps:</p>   
+<ul class="b">
+   <li><p class="ulist">Define a function with a variable in the outer scope.</p></li>
+   <li><p class="ulist">Inside the function, define a nested function with its own variable.</p></li>  
+   <li><p class="ulist">Log both variables from the nested function.</p></li>  
+   </ul>
+
+<h3>Exercise 7: Function Factory</h3>
+<p>Create a function factory that generates functions to multiply a number by a specified factor. </p>
+<p class="ulist">Steps:</p>
+<ul class="b">
+   <li><p class="ulist">Define a function and create Multiplier that takes a factor parameter.</p></li>
+   <li><p class="ulist">Inside createMultiplier, define a function that multiplies a number by 
+   the given factor.</p></li>  
+   <li><p class="ulist">Return the generated function. </p></li>  
+   </ul>
+
 
 
 

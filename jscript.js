@@ -338,6 +338,29 @@
 
             processData([1, 2, 3], logElement);   //Output 1, 2, 3
 
+//Exercise 6: Nested Functions with Different Scopes
+        function nestedScopes() {
+            let outerVar = "I am from the outer scope.\n";
+
+            function innerScope(){
+                let innerVar = "And I am from the inner scope";
+                console.log(outerVar, innerVar);
+            }
+
+            innerScope();
+        }
+
+            nestedScopes(); 
+            
+//Exercise 7: Function Factory 
+        function createMultiplier(factor){
+            return function(number){
+
+                return number * factor;
+            }
+        }
+        const multiplyByTwo = createMultiplier(2); 
+        console.log(multiplyByTwo(5));              // Output: 10 
 
 
 
