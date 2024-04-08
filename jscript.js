@@ -324,43 +324,55 @@
         //     counterFunc();      //Output 1946 
 
 //Exercise 5: Nested function with array callback loop 
-        function processData(array, callback){
+        // function processData(array, callback){
          
-            for (let element of array){
-                callback(element);
-            }
-        }
+        //     for (let element of array){
+        //         callback(element);
+        //     }
+        // }
 
-        function logElement(element) {
-            console.log(element);
+        // function logElement(element) {
+        //     console.log(element);
 
-        }
+        // }
 
-            processData([1, 2, 3], logElement);   //Output 1, 2, 3
+        //     processData([1, 2, 3], logElement);   //Output 1, 2, 3
 
 //Exercise 6: Nested Functions with Different Scopes
-        function nestedScopes() {
-            let outerVar = "I am from the outer scope.\n";
+//         function nestedScopes() {
+//             let outerVar = "I am from the outer scope.\n";
 
-            function innerScope(){
-                let innerVar = "And I am from the inner scope";
-                console.log(outerVar, innerVar);
-            }
+//             function innerScope(){
+//                 let innerVar = "And I am from the inner scope";
+//                 console.log(outerVar, innerVar);
+//             }
 
-            innerScope();
-        }
+//             innerScope();
+//         }
 
-            nestedScopes(); 
+//             nestedScopes(); 
             
-//Exercise 7: Function Factory 
-        function createMultiplier(factor){
-            return function(number){
+// //Exercise 7: Function Factory 
+//         function createMultiplier(factor){
+//             return function(number){
 
-                return number * factor;
+//                 return number * factor;
+//             }
+//         }
+//         const multiplyByTwo = createMultiplier(2); 
+//         console.log(multiplyByTwo(5));              // Output: 10 
+
+//Exercise 8: Recursive Nested Function
+        function calculateFactorial(number) {
+            function factorial(n){
+
+                return n <= 1 ? 1 : n * factorial(n-1);
             }
+
+                return factorial(number);
         }
-        const multiplyByTwo = createMultiplier(2); 
-        console.log(multiplyByTwo(5));              // Output: 10 
+
+                console.log(calculateFactorial(5));    //Output 120
 
 
 

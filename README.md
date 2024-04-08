@@ -22,3 +22,5 @@ Exercise repo exclusively JS nests
 "Added Ex 4 and Ex 5 NB I forgot to dec arr with squ braks!!!"
 
 "Added Ex 6 and Ex 7 with some ul li as well"
+
+"Added Ex 8 ok"
