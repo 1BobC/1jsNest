@@ -374,6 +374,29 @@
 
                 console.log(calculateFactorial(5));    //Output 120
 
+//Exercise 9: Password Generator
+        function passwordGenerator(length) {
+            function generateRandomChar(){
+
+                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+                const randomIndex = Math.floor(Math.random() * chars.length);
+                
+                return chars[randomIndex] ;
+
+            }
+                let password = "" ;
+                for (let i = 0; i < length; i++) {
+                    password += generateRandomChar();
+
+                }
+                    return password;
+
+        }
+                console.log(passwordGenerator(8)); 
+                console.log(passwordGenerator(13));
+                console.log(passwordGenerator(22));
+
 
 
 

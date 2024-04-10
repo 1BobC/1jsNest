@@ -24,3 +24,5 @@ Exercise repo exclusively JS nests
 "Added Ex 6 and Ex 7 with some ul li as well"
 
 "Added Ex 8 ok"
+
+"Added Ex 9 ok"
