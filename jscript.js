@@ -405,18 +405,26 @@
 
             } ;
         }
-            const addTwo = x => x + 2 ;
+            //const addTwo = x => x + 2 ;
+
+            //const multiplyByThree = x => x * 3 ;
+
+            //const composedFunction = compose(multiplyByThree, addTwo) ;
+
+            //console.log(composedFunction(5)) ; 
+            
+            //Output format: (5 * 3) + 2 = 17
 
             const multiplyByThree = x => x * 3 ;
 
+            const addTwo = x => x + 2 ;
+
             const composedFunction = compose(multiplyByThree, addTwo) ;
 
-            console.log(composedFunction(5)) ;
+            console.log(composedFunction(-5)) ;
 
-            // const composedFunction1 = compose(addTwo, multiplyByThree) ;
-
-            // console.log(composedFunction(5)) ;
-
+       
+             
 
 
 
