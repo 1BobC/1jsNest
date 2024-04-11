@@ -26,3 +26,5 @@ Exercise repo exclusively JS nests
 "Added Ex 8 ok"
 
 "Added Ex 9 ok"
+
+"Added Ex 10 ok but check outputs again"

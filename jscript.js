@@ -397,6 +397,26 @@
                 console.log(passwordGenerator(13));
                 console.log(passwordGenerator(22));
 
+//Exercise 10: Function Composition 
+        function compose(func1, func2) {
+            return function(value) {
+                
+                return func2(func1(value)) ;
+
+            } ;
+        }
+            const addTwo = x => x + 2 ;
+
+            const multiplyByThree = x => x * 3 ;
+
+            const composedFunction = compose(multiplyByThree, addTwo) ;
+
+            console.log(composedFunction(5)) ;
+
+            // const composedFunction1 = compose(addTwo, multiplyByThree) ;
+
+            // console.log(composedFunction(5)) ;
+
 
 
 
