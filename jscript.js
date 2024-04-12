@@ -1,78 +1,84 @@
     // js nested function exercises only
 // 1 - Exercise from javascript.info
-    // function sayHiBye(firstName, lastName) {
+    function sayHiBye(firstName, lastName) {
 
-    // helper nested function to use below
-//     function getFullName() {
-//       return firstName + " " + lastName;
-//     }
-//     console.log ( "Hello, " + getFullName() );
-//     console.log ( "Bye, " + getFullName() );
+    //helper nested function to use below
+    function getFullName() {
+      return firstName + " " + lastName;
+    }
+    console.log ( "Hello, " + getFullName() );
+    console.log ( "Bye, " + getFullName() );
   
-//     alert( "Hello, " + getFullName() );
-//     alert( "Bye, " + getFullName() );  
+    // alert( "Hello, " + getFullName() );
+    // alert( "Bye, " + getFullName() );  
 
-//     document.getElementById("Ex 1a").innerText= ( "Hello, " + getFullName() );
-// 		document.getElementById("Ex 1b").innerText= ( "Bye, " + getFullName() );
-//   }
+    document.getElementById("Ex 1a").innerText= ( "Hello, " + getFullName() );
+	document.getElementById("Ex 1b").innerText= ( "Bye, " + getFullName() );
+  }
 
-//   sayHiBye("Damon", "Runyon");
+      sayHiBye("Damon", "Runyon");
 
 //2 - Ex 1a, 1b copied by hand with changes
-//   function sayHiGo(firstN, lastN)  {
-//     // nested function
-//     function getFullN()  {
-//       return firstN + " " + lastN;
-//     }
-//     console.log ("Hello, " + getFullN());
-//     console.log ("Go, " + getFullN());
+  function sayHiGo(firstN, lastN)  {
+    // nested function
+    function getFullN()  {
+      return firstN + " " + lastN;
+    }
+    console.log ("Hello, " + getFullN());
+    console.log ("Go, " + getFullN());
 
-//     alert("Hello, " + getFullN());
-//     alert("Go, " + getFullN());
+    // alert("Hello, " + getFullN());
+    // alert("Go, " + getFullN());
 
-//     document.getElementById("Ex 1x").innerText= ("Hello, " + getFullN());
-//     document.getElementById("Ex 1y").innerText= ("Go, " + getFullN());
-//   }
+    document.getElementById("Ex 1x").innerText= ("Hello, " + getFullN());
+    document.getElementById("Ex 1y").innerText= ("'Bye, " + getFullN());
+  }
 
-//   sayHiGo("Tory", "Party");
+  sayHiGo("Tory", "Party");
 
 //3 - Ex from Linkedin doc Counter with Closure 
-    // function counter(){
-    //   let count = 0;
-    //   function increment(){
-    //     count++;
-    //     console.log(count);
-          
-    //   }
-      
-    //   return increment;
-      
-    // }
-    //   const counterFunctionA = counter();
-    //   counterFunctionA(); //Output: 1
-    //   counterFunctionA(); //Output: 2
-    //   counterFunctionA(); //Output: 3
+    function counter(){
+      let count = 0;
+      function increment(){
 
+        console.log(count);
+
+        document.getElementById("Count").innerText= "Highest count is: " + (count);
+
+        count++;
+            
+      }
+      
+      return increment;
+      
+    }
+      const counterFunctionA = counter();
+      counterFunctionA(); //Output: 0  
+      counterFunctionA(); //Output: 1
+      counterFunctionA(); //Output: 2
+      
 //Explanetory example Scope 
-    // function outerScopeExample() {
+    function outerScopeExample() {
 
-    //   let outerVar = "I am from outer scope";
+      let outerVar = "I am from outer scope";
 
-    //   function innerScopeExampe() {
+      function innerScopeExampe() {
 
-    //     let innerVar = "But I am from inner scope";
-    //     console.log(innerVar);
+        let innerVar = "But I am from inner scope";
+        console.log(innerVar);
 
-    //     console.log(outerVar);  //accesses outer variable
+        console.log(outerVar);  //accesses outer variable
+        
+        document.getElementById("outerScope").innerText= (outerVar);
+        document.getElementById("innerScope").innerText= (innerVar);
+      }
 
-    //   }
-
-    //   innerScopeExampe();
+      innerScopeExampe();
       
-    // }
+    }
 
-    // outerScopeExample(); //Output: I am from outer scope
-    //document.getElementById("LEe").innerText= (???????);
+    outerScopeExample(); //Output: I am from outer scope
+    
 
 //and Encapsulation
     // function counter() {
@@ -363,48 +369,48 @@
 //         console.log(multiplyByTwo(5));              // Output: 10 
 
 //Exercise 8: Recursive Nested Function
-        function calculateFactorial(number) {
-            function factorial(n){
+        // function calculateFactorial(number) {
+        //     function factorial(n){
 
-                return n <= 1 ? 1 : n * factorial(n-1);
-            }
+        //         return n <= 1 ? 1 : n * factorial(n-1);
+        //     }
 
-                return factorial(number);
-        }
+        //         return factorial(number);
+        // }
 
-                console.log(calculateFactorial(5));    //Output 120
+        //         console.log(calculateFactorial(5));    //Output 120
 
 //Exercise 9: Password Generator
-        function passwordGenerator(length) {
-            function generateRandomChar(){
+        // function passwordGenerator(length) {
+        //     function generateRandomChar(){
 
-                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        //         const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-                const randomIndex = Math.floor(Math.random() * chars.length);
+        //         const randomIndex = Math.floor(Math.random() * chars.length);
                 
-                return chars[randomIndex] ;
+        //         return chars[randomIndex] ;
 
-            }
-                let password = "" ;
-                for (let i = 0; i < length; i++) {
-                    password += generateRandomChar();
+        //     }
+        //         let password = "" ;
+        //         for (let i = 0; i < length; i++) {
+        //             password += generateRandomChar();
 
-                }
-                    return password;
+        //         }
+        //             return password;
 
-        }
-                console.log(passwordGenerator(8)); 
-                console.log(passwordGenerator(13));
-                console.log(passwordGenerator(22));
+        // }
+        //         console.log(passwordGenerator(8)); 
+        //         console.log(passwordGenerator(13));
+        //         console.log(passwordGenerator(22));
 
 //Exercise 10: Function Composition 
-        function compose(func1, func2) {
-            return function(value) {
+        // function compose(func1, func2) {
+        //     return function(value) {
                 
-                return func2(func1(value)) ;
+        //         return func2(func1(value)) ;
 
-            } ;
-        }
+        //     } ;
+        // }
             //const addTwo = x => x + 2 ;
 
             //const multiplyByThree = x => x * 3 ;
@@ -415,13 +421,13 @@
             
             //Output format: (5 * 3) + 2 = 17
 
-            const multiplyByThree = x => x * 3 ;
+            // const multiplyByThree = x => x * 3 ;
 
-            const addTwo = x => x + 2 ;
+            // const addTwo = x => x + 2 ;
 
-            const composedFunction = compose(multiplyByThree, addTwo) ;
+            // const composedFunction = compose(multiplyByThree, addTwo) ;
 
-            console.log(composedFunction(-5)) ;
+            // console.log(composedFunction(-5)) ;
 
        
              

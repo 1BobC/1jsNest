@@ -28,3 +28,5 @@ Exercise repo exclusively JS nests
 "Added Ex 9 ok"
 
 "Added Ex 10 ok but check outputs again"
+
+"Tinkering with document get, more to do on Example Scope"
