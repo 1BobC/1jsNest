@@ -25,37 +25,41 @@
       return firstN + " " + lastN;
     }
     console.log ("Hello, " + getFullN());
-    console.log ("Go, " + getFullN());
+    console.log ("Be kind to people " + getFullN());
 
     // alert("Hello, " + getFullN());
     // alert("Go, " + getFullN());
 
     document.getElementById("Ex 1x").innerText= ("Hello, " + getFullN());
-    document.getElementById("Ex 1y").innerText= ("'Bye, " + getFullN());
+    document.getElementById("Ex 1y").innerText= ("Be kind to people " + getFullN());
   }
 
   sayHiGo("Tory", "Party");
 
 //3 - Ex from Linkedin doc Counter with Closure 
-    function counter(){
-      let count = 0;
+    function counterA(){
+      let countA = 0;
       function increment(){
 
-        console.log(count);
+        console.log("Before increment: " + countA);
 
-        document.getElementById("Count").innerText= "Highest count is: " + (count);
+        document.getElementById("Count before").innerText= ("Final count before increments: " + countA);
 
-        count++;
+        countA++;
+
+        console.log("After increment: " + countA);
+
+        document.getElementById("Count after").innerText= ("Final count after increments: " + countA);
             
       }
       
       return increment;
       
     }
-      const counterFunctionA = counter();
-      counterFunctionA(); //Output: 0  
-      counterFunctionA(); //Output: 1
-      counterFunctionA(); //Output: 2
+      const counterFunctionA = counterA();
+      counterFunctionA(); //Output: Before increment: 0 , After increment: 1
+      counterFunctionA(); //Output: Before increment: 1 , After increment: 2
+      counterFunctionA(); //Output: Before increment: 2 , After increment: 3
       
 //Explanetory example Scope 
     function outerScopeExample() {
@@ -65,10 +69,10 @@
       function innerScopeExampe() {
 
         let innerVar = "But I am from inner scope";
+        
+        console.log(outerVar);  //accesses outer variable
         console.log(innerVar);
 
-        console.log(outerVar);  //accesses outer variable
-        
         document.getElementById("outerScope").innerText= (outerVar);
         document.getElementById("innerScope").innerText= (innerVar);
       }
@@ -81,20 +85,20 @@
     
 
 //and Encapsulation
-    // function counter() {
-    //   let count = 0;
+    function counterB() {
+      let countB = 0;
 
-    //   function increment() {
-    //     count++;
-    //     console.log(count);
+      function increment() {
+        countB++;
+        console.log(countB);
 
-    //   }
-    //   return increment;
+      }
+      return increment;
 
-    // }    
-    //   const counterFunctionb = counter();
-    //   counterFunctionb(); //Output 1
-    //   counterFunctionb(); //Output 2
+    }    
+      const counterFunctionB = counterB();
+      counterFunctionB(); //Output 1
+      counterFunctionB(); //Output 2
 
 //Example Closure
     // function outerClosure() {

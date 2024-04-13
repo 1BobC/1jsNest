@@ -30,3 +30,5 @@ Exercise repo exclusively JS nests
 "Added Ex 10 ok but check outputs again"
 
 "Tinkering with document get, more to do on Example Scope"
+
+"Still tinkering making function names unique, so better!"
