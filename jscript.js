@@ -89,9 +89,14 @@
       let countB = 0;
 
       function increment() {
-        countB++;
-        console.log(countB);
 
+        console.log("Before increment: " + countB);
+        document.getElementById("CountB before").innerText= ("Final count before increments: " + countB);
+
+        countB++;
+
+        console.log("After increment: " + countB);
+        document.getElementById("CountB after").innerText= ("Final count after increments: " + countB);
       }
       return increment;
 
@@ -101,74 +106,83 @@
       counterFunctionB(); //Output 2
 
 //Example Closure
-    // function outerClosure() {
-    //   let outerVar = "I am from outer closure";
+    function outerClosure() {
+      let outerVar = "I am the outer variable accessed after the function has been called";
 
-    //   function innerClosure() {
-    //     console.log(outerVar); //Accessing outer variable even after function called
+      function innerClosure() {
+        console.log(outerVar); //Accessing outer variable even after function called
+        document.getElementById("outerClosure").innerText= outerVar;
 
-    //   }
-    //   return innerClosure;
+      }
+      return innerClosure;
 
-    // }
-    //   const closureFunction = outerClosure();
-    //   closureFunction() ; //Output: I am from outer closure
+    }
+      const closureFunction = outerClosure();
+      closureFunction() ; //Output: I am the outer variable accessed after the function has been called
 
 //Example from JS learning outcomes2 file
-    // function outerF(){
-    //   console.log("I'm the outer function");
+    function outerF(){
+      console.log("I'm the outer function");
+      document.getElementById("outerFunction").innerText= "I'm the outer function";
 
-    //   function innerF(){
-    //     console.log("I'm the inner function");
-    //   }
-    //   innerF();
-    // }
-    //   outerF();
+      function innerF(){
+        console.log("I'm the inner function");
+        document.getElementById("innerFunction").innerText= "I'm the inner function";
+      }
+      innerF();
+    }
+      outerF();
 
     //Example similar (simple) as above
-    // function parent(){
-    //   console.log("I'm the parent");
+    function parent(){
+      console.log("I'm the parent");
+      document.getElementById("parent").innerText= "I'm the parent";
 
-    //   function child(){
-    //     console.log("I'm the child");
-    //   }
-    //     child();
-    // }     
-    //     parent(); 
+      function child(){
+        console.log("I'm the child");
+        document.getElementById("child").innerText= "I'm the child";
+      }
+        child();
+    }     
+        parent(); 
 
 //Example again similar (simple) as above
-    // function bo(){
-    //   console.log("Say BO");
+    function bo(){
+      console.log("Say BO");
+      document.getElementById("bo").innerText= "Say BO";
 
-    //   function peep(){
-    //     console.log("Now say PEEP!");
-    //   }
-    //   peep();
-    // }
-    //   bo();
+      function peep(){
+        console.log("Now say PEEP!");
+        document.getElementById("peep").innerText= "Now say PEEP";
+      }
+      peep();
+    }
+      bo();
 
 //Example do I remember (simple) as above? Hand in glove
-    // function hand(){
-    //   console.log("Hand ");
+    function hand(){
+      console.log("Hand... ");
+      document.getElementById("hand").innerText= "Hand... ";
 
-    //   function glove(){
-    //     console.log("in Glove");
-
-    //   }
-    //   glove();
-    // }
-    //   hand();
+      function glove(){
+        console.log("...in Glove");
+        document.getElementById("glove").innerText= "...in Glove ";
+      }
+      glove();
+    }
+      hand();
 
 //Example do I still remember?
-    // function still(){
-    //   console.log("Do I still ");
-
-    //   function remember(){
-    //     console.log("remember?");
-    //   }
-    //   remember();
-    // }
-    //   still();
+    function still(){
+      console.log("Do I still... ");
+      document.getElementById("still").innerText= "Do I still... ";
+      function remember(){
+        console.log("...remember?");
+        document.getElementById("remeber").innerText= "...remember? ";
+      }
+      remember();
+    }
+      still();
 
 //Redo example of Scope defining the visibility and accessibility of variables.
       // function outerScopeEG(){

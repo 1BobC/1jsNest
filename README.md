@@ -32,3 +32,5 @@ Exercise repo exclusively JS nests
 "Tinkering with document get, more to do on Example Scope"
 
 "Still tinkering making function names unique, so better!"
+
+"Tinkered up to Redo Scope ok"
