@@ -178,61 +178,63 @@
       document.getElementById("still").innerText= "Do I still... ";
       function remember(){
         console.log("...remember?");
-        document.getElementById("remeber").innerText= "...remember? ";
+        document.getElementById("remember").innerText= "...remember? ";
       }
       remember();
     }
       still();
 
 //Redo example of Scope defining the visibility and accessibility of variables.
-      // function outerScopeEG(){
-      //   let outerVar = "I am from outer scope / container function.";
+      function outerScopeEG(){
+        let outerVar = "I am from outer scope / container function.";
 
-      //   function innerScopeEG(){
+        function innerScopeEG(){
 
-      //     console.log(outerVar) ; //Accesses outer variable 
-      //   }
+          console.log(outerVar) ; //Accesses outer variable 
+          document.getElementById("scopeEG").innerText= "I am from outer scope / container function.";
+        }
 
-      //   innerScopeEG() ;
+        innerScopeEG() ;
+      }
 
-      // }
-
-      //   outerScopeEG(); //Output :I am from outer scope / container function. 
+        outerScopeEG(); //Output :I am from outer scope / container function. 
 
 //Redo example of Encapsulation
-      // function counter(){
-      //   let count = 0;
+      function counter(){
+        let count = 0;
 
-      //   function increment(){
-      //     console.log(count);
-      //     count++
-      //   }
-      //     return increment;
-      // }
-      //   const counterFunctionC = counter();
-
-      //   counterFunctionC();    //Output 1
-      //   counterFunctionC();    //Output 2
-      //   counterFunctionC();    //Output 3
-      //   counterFunctionC();    //Output 4
+        function increment(){
+          console.log("Before increment:  " + count);
+          document.getElementById("CountC before").innerText= ("Before final increment:  " + count);
+          count++
+          console.log("After increment:  " + count);
+          document.getElementById("CountC after").innerText= ("After final increment:  " + count);
+        }
+          return increment;
+      }
+        const counterFunctionC = counter();
+        counterFunctionC();    //Output 1
+        counterFunctionC();    //Output 2
+        counterFunctionC();    //Output 3
+        counterFunctionC();    //Output 4
         
 //Exercise Closure
-    //    function outerClosure(){
-    //     let outerVar = "I am from outer closure.";
+       function outerClosure(){
+        let outerVar = "I am from outer closure.";
 
-    //     function innerClosure(){
-    //       console.log(outerVar); //Accessing outer variable even after function finishes
+        function innerClosure(){
+          console.log(outerVar); //Accessing outer variable even after function finishes
 
-    //     }
-    //     return innerClosure();
-    //    }
+        }
+        return innerClosure();
+       }
 
-        // const closureFunction = outerClosure();
-        // closureFunction(); //Output: I am from outer closure
-        // outerClosure();
-        // console.log("End of function, first time");
-        // outerClosure();
-        // console.log("End of function, second time");
+        const closureFunc = outerClosure();
+        closureFunc(); //Output: I am from outer closure
+        outerClosure();
+        console.log("End of function, first time");
+        outerClosure();
+        console.log("End of function, second time");
   
 //Exercise 1: Basic Nested Function LinkedIn JSNested Functions 
         // function outer() {

@@ -34,3 +34,5 @@ Exercise repo exclusively JS nests
 "Still tinkering making function names unique, so better!"
 
 "Tinkered up to Redo Scope ok"
+
+"Ex Closure index 77 not quite right!"
