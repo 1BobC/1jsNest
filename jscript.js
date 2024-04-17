@@ -110,15 +110,16 @@
       let outerVar = "I am the outer variable accessed after the function has been called";
 
       function innerClosure() {
-        console.log(outerVar); //Accessing outer variable even after function called
-        document.getElementById("outerClosure").innerText= outerVar;
+        console.log("Yoo-hoo" + outerVar); //Accessing outer variable even after function called
+        document.getElementById("outerClosure1").innerText= "Yoo-hoo"; // + outerVar;
 
       }
       return innerClosure;
 
     }
       const closureFunction = outerClosure();
-      closureFunction() ; //Output: I am the outer variable accessed after the function has been called
+      closureFunction(); //Output: I am the outer variable accessed after the function has been called
+      document.getElementById("outerClosure2").innerText= "any body there?";//outerVar;
 
 //Example from JS learning outcomes2 file
     function outerF(){
@@ -219,51 +220,57 @@
         counterFunctionC();    //Output 4
         
 //Exercise Closure
-       function outerClosure(){
-        let outerVar = "I am from outer closure.";
+       function outerClos(){
+        let outerVar = "I am from outer closure each time.";
 
         function innerClosure(){
           console.log(outerVar); //Accessing outer variable even after function finishes
+          document.getElementById("eachTime").innerText= ("I am from outer closure each time.");
 
         }
         return innerClosure();
-       }
+        
+      }
 
-        const closureFunc = outerClosure();
-        closureFunc(); //Output: I am from outer closure
-        outerClosure();
+        outerClos();
         console.log("End of function, first time");
-        outerClosure();
+        document.getElementById("outerFirst").innerText= ("End of function, first time");
+        outerClos();
         console.log("End of function, second time");
+        document.getElementById("outerSecond").innerText= ("End of function, second time");
   
 //Exercise 1: Basic Nested Function LinkedIn JSNested Functions 
-        // function outer() {
-        //     console.log("Outer Function");
+        function outerG() {
+            console.log("Outer Function G");
+            document.getElementById("outG").innerText= ("Outer Function G");
 
-        //     function inner() {
-        //         console.log("Inner Function");
-        //     }
-        //     inner();
+            function innerG() {
+                console.log("Inner Function G");
+                document.getElementById("inG").innerText= ("Inner Function G");
+            }
+              innerG();
 
-        // }
-        //     outer();
+        }
+            outerG();
         //Output:
         //Outer Function
         //Inner Function
 
 //Exercise 2: Access Outer Scope Variable LinkedIn JSNested Functions
-        // function outerEx2(){
-        //     let outerVar = "I am the outer variable logged from the inner variable";
+        function outerEx2(){
+            let outerVar = "I am the outer variable logged from the inner variable";
 
-        //     function innerEx2(){
-        //         console.log(outerVar);
-
-        //     }
-        //     innerEx2(); //calls the inner function 
-
-        // }
-        //     outerEx2(); //calls the outer (parent) function and starts the function off
-
+            function innerEx2(){
+                console.log(outerVar);
+                document.getElementById("SVE2").innerText= ("I am the outer variable logged from the inner variable");
+            }
+            innerEx2(); //calls the inner function 
+            console.log("InnerEx2() calls the inner function");
+            document.getElementById("SVE3").innerText= ("InnerEx2() calls the inner function");
+        }
+            outerEx2(); //calls the outer (parent) function and starts the function off
+            console.log("outerEx2() calls the outer, parent, function and starts the functon off");
+            document.getElementById("SVE4").innerText= ("outerEx2() calls the outer, parent, function and starts the functon off");
 //flexiple.com expression returns undefined (part of closure explanation)
         // const getName = (name) => {
 

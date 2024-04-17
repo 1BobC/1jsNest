@@ -36,3 +36,5 @@ Exercise repo exclusively JS nests
 "Tinkered up to Redo Scope ok"
 
 "Ex Closure index 77 not quite right!"
+
+"Ex Closure index 77 ok, LinkedIn JSNested Functions ex 1 and 2 outputs on web page"
