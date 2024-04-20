@@ -38,3 +38,6 @@ Exercise repo exclusively JS nests
 "Ex Closure index 77 not quite right!"
 
 "Ex Closure index 77 ok, LinkedIn JSNested Functions ex 1 and 2 outputs on web page"
+
+"Have been busy and added flexiple.com, Exercise 3: Counter with Closure, 
+Further explanation and exercise  of closure answers to webpage"

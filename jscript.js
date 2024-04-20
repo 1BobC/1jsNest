@@ -272,52 +272,57 @@
             console.log("outerEx2() calls the outer, parent, function and starts the functon off");
             document.getElementById("SVE4").innerText= ("outerEx2() calls the outer, parent, function and starts the functon off");
 //flexiple.com expression returns undefined (part of closure explanation)
-        // const getName = (name) => {
+        const getName = (name) => {
 
-        //     if (name == 'Flexiple') {
+            if (name == 'Flexiple') {
         
-        //         console.log(name);
-        //     }
-        // }   
-        //     getName('Flexiple');
-            //getName('Arthur');  //No result in console
-            //getName(name); //No result in console
-            //getName();    /No result in console
+     console.log(name);
+     document.getElementById("flexy").innerText= (name);
+            }
+        }   
+            getName('Flexiple');
+            getName('Arthur');  //No result in console
+            getName(name); //No result in console
+            getName();    //No result in console
             //flexiple comment - This function actually returns undefined
             //However with 'getName('Flexiple');' called, console.log shows Flexiple
 
 //Exercise 3: Counter with Closure
-        // function counter() {
-        //     let count = 0;
+        function counterD() {
+            let countD= 0;
 
-        //     function increment(){
-        //         count++;
+            function increment(){
+                countD++;
 
-        //         console.log(count);
-        //     }
-        //         return increment;
-        // }
+                console.log(countD);
+                document.getElementById("countD").innerText= ("The final count is: " + countD + " - see console.");
+            }
+                return increment;
+        }
 
-        //     const counterFunction = counter();
-        //     counterFunction();  //Output 1
-        //     counterFunction();  //Output 2
-        //     counterFunction();  //Output 3
+            const counterFunctionD = counterD();
+            counterFunctionD();  //Output 1
+            counterFunctionD();  //Output 2
+            counterFunctionD();  //Output 3
 
 //Further explanation and exercise  of closure from M mdn web docs on Linkdin JS odt
-        // function addSquares(a, b){
+        function addSquares(a, b){
 
-        //     function square(x) {
+            function square(x) {
 
-        //         return x * x;
-        //     }
+                return x * x;
+            }
 
-        //     return square(a) + square(b);
+            return square(a) + square(b);
 
-        // }
+        }
 
-        //     console.log(addSquares(2, 3));
-        //     console.log(addSquares(20, 30));
-        //     console.log(addSquares(200, 300));
+        console.log(addSquares(2, 3));
+        document.getElementById("sqa").innerText= ("Add the squares of 2 and 3 and the answer is... ") + addSquares(2, 3);
+            console.log(addSquares(20, 30));
+        document.getElementById("sqb").innerText= ("Add the squares of 20 and 30 and the answer is... ") + addSquares(20, 30);
+            console.log(addSquares(200, 300));
+        document.getElementById("sqc").innerText= ("Add the squares of 200 and 300 and the answer is... ") + addSquares(200, 300);
 
 
 //Even more explanation and exercise of closure from M mdn web docs on Linkdin JS odt
